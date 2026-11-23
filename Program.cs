@@ -24,6 +24,13 @@ namespace linq
             foreach (var p in q3)
                 Console.WriteLine($"{p.ProductName} - {p.UnitPrice}");
             #endregion
+            #region Q4
+            var q4 = ProductList.Where(p => p.UnitPrice >= 10 && p.UnitPrice <= 30);
+
+            foreach (var p in q4)
+                Console.WriteLine($"{p.ProductName} - {p.UnitPrice}");
+            #endregion
+
 
         }
     }
