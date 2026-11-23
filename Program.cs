@@ -50,6 +50,10 @@ namespace linq
                 Console.WriteLine($"{item.Name} - {item.Price} - {item.StockStatus}");
             #endregion
 
+            #region Q7
+            var q7 = ProductList.Select((p, i) => $"{i + 1}. {p.ProductName}");
+            Console.WriteLine(string.Join(", ", q7));
+            #endregion
 
         }
     }
