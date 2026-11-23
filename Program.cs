@@ -18,6 +18,13 @@ namespace linq
             foreach (var name in q2)
                 Console.WriteLine(name);
             #endregion
+            #region Q3
+            var q3 = ProductList.OrderBy(p => p.UnitPrice);
+
+            foreach (var p in q3)
+                Console.WriteLine($"{p.ProductName} - {p.UnitPrice}");
+            #endregion
+
         }
     }
 }
