@@ -96,6 +96,17 @@ namespace linq
             foreach (var w in q12)
                 Console.WriteLine(w);
             #endregion
+            #region Q13
+            string[] Digits = { "zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine" };
+
+            var q13 = Digits
+                .Where(d => d[1] == 'i')
+                .Reverse()
+                .ToList();
+
+            foreach (var d in q13)
+                Console.WriteLine(d);
+            #endregion
         }
     }
 }
