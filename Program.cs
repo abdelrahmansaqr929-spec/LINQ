@@ -70,7 +70,15 @@ namespace linq
             foreach (var p in q9)
                 Console.WriteLine($"{p.ProductName} - {p.UnitsInStock}");
             #endregion
+            #region Q10
+            var q10 = from c in CustomerList
+                      from o in c.Orders
+                      where o.OrderDate.Year >= 1997
+                      select new { c.CustomerID, o.OrderDate };
 
+            foreach (var item in q10)
+                Console.WriteLine($"{item.CustomerID} - {item.OrderDate}");
+            #endregion
         }
     }
 }
