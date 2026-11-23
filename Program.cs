@@ -1,4 +1,5 @@
-﻿namespace linq
+﻿using static linq.Source;
+namespace linq
 {
     internal class Program
     {
@@ -9,6 +10,13 @@
 
             foreach (var p in q1)
                 Console.WriteLine($"{p.ProductName} - {p.UnitPrice}");
+            #endregion
+
+            #region Q2
+            var q2 = ProductList.Select(p => p.ProductName);
+
+            foreach (var name in q2)
+                Console.WriteLine(name);
             #endregion
         }
     }
