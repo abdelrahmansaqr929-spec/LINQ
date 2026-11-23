@@ -62,6 +62,14 @@ namespace linq
             foreach (var p in q8)
                 Console.WriteLine($"{p.Category} - {p.ProductName} - {p.UnitPrice}");
             #endregion
+            #region Q9
+            var q9 = ProductList
+                .Where(p => p.Category == "Beverages")
+                .OrderByDescending(p => p.UnitsInStock);
+
+            foreach (var p in q9)
+                Console.WriteLine($"{p.ProductName} - {p.UnitsInStock}");
+            #endregion
 
         }
     }
