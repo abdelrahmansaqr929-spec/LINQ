@@ -79,6 +79,13 @@ namespace linq
             foreach (var item in q10)
                 Console.WriteLine($"{item.CustomerID} - {item.OrderDate}");
             #endregion
+
+            #region Q11
+            var q11 = ProductList.Select((p, i) => new { Position = i + 1, p.ProductName });
+
+            foreach (var item in q11)
+                Console.WriteLine($"{item.Position} - {item.ProductName}");
+            #endregion
         }
     }
 }
