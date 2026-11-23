@@ -54,6 +54,14 @@ namespace linq
             var q7 = ProductList.Select((p, i) => $"{i + 1}. {p.ProductName}");
             Console.WriteLine(string.Join(", ", q7));
             #endregion
+            #region Q8
+            var q8 = ProductList
+                .OrderBy(p => p.Category)
+                .ThenByDescending(p => p.UnitPrice);
+
+            foreach (var p in q8)
+                Console.WriteLine($"{p.Category} - {p.ProductName} - {p.UnitPrice}");
+            #endregion
 
         }
     }
