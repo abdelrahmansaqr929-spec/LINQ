@@ -86,6 +86,16 @@ namespace linq
             foreach (var item in q11)
                 Console.WriteLine($"{item.Position} - {item.ProductName}");
             #endregion
+            #region Q12
+            string[] Arr = { "aPPLE", "AbAcUs", "bRaNcH", "BlUeBeRrY", "ClOvEr", "cHeRry" };
+
+            var q12 = Arr
+                .OrderBy(w => w.Length)
+                .ThenBy(w => w, StringComparer.OrdinalIgnoreCase);
+
+            foreach (var w in q12)
+                Console.WriteLine(w);
+            #endregion
         }
     }
 }
